@@ -1,0 +1,23 @@
+.link,
+.transparentLink {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.link {
+  background-color: #eb6f25;
+  color: white;
+}
+
+.transparentLink {
+  border: 1px solid #eb6f25;
+  color: #eb6f25;
+}
+
+.link:hover,
+.transparentLink:hover {
+  filter: brightness(1.1);
+}
