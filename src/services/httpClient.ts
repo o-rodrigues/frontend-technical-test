@@ -29,7 +29,7 @@ class HttpClient {
     return this.axios.get(url, config)
   }
 
-  post(url: string, data: any, config: any): Promise<AxiosResponse> {
+  post(url: string, data: any, config?: any): Promise<AxiosResponse> {
     return this.axios.post(url, data, config)
   }
 
@@ -37,7 +37,7 @@ class HttpClient {
     return this.axios.put(url, data, config)
   }
 
-  delete(url: string, config: any): Promise<AxiosResponse> {
+  delete(url: string, config?: any): Promise<AxiosResponse> {
     return this.axios.delete(url,config)
   }
 }

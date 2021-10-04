@@ -18,7 +18,7 @@
   display: flex;
 }
 
-.sender {
+.recipient {
   align-items: flex-start;
   display: flex;
   flex-direction: column;

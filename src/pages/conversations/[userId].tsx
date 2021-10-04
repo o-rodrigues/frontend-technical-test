@@ -44,7 +44,10 @@ const Conversations: FC<IProps> = ({ conversations }): ReactElement => {
 }
 
 export const getServerSideProps: GetServerSideProps = async(context) => {
-  const res: AxiosResponse<Conversation[]>  = await HTTPClient.get(`conversations/${context.params.userId}`)
+  const userId: string = Array.isArray(context.params.userId)
+    ? context.params.userId[0]
+    : context.params.userId;
+  const res: AxiosResponse<Conversation[]>  = await HTTPClient.get(`conversations/${userId}`)
   const conversations: Conversation[] = await res.data
 
   return { props: { conversations } }

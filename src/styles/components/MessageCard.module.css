@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recipient {
+  align-items: flex-start;
+}
+
+.sender {
+  align-items: flex-end;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.message {
+  align-items: center;
+  border-radius: 15px;
+  display: flex;
+  margin: 0.5rem 0;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.recipient .message {
+  background-color: #eb6f25;
+}
+
+.sender .message {
+  background-color: silver;
+}
+
+
+@media (max-width: 600px) {
+  .message {
+    max-width: 400px;
+  }
+}

@@ -12,13 +12,13 @@ interface IProps {
 }
 
 const ConversationCard: FC<IProps> = ({ conversation }): ReactElement => (
-  <Link href={`/`}>
+  <Link href={`/messages/${conversation.id}`}>
     <a className={styles.container}>
       <div className={styles.avatar}>
-        <Image alt="Sender's avatar" height={AVATAR_CARD_SIZE} src={Avatar} width={AVATAR_CARD_SIZE} />
+        <Image alt="Recipient's avatar" height={AVATAR_CARD_SIZE} src={Avatar} width={AVATAR_CARD_SIZE} />
       </div>
-      <div className={styles.sender}>
-        <div className={styles.name}>{conversation.senderNickname}</div>
+      <div className={styles.recipient}>
+        <div className={styles.name}>{conversation.recipientNickname}</div>
         <div className={styles.preview}>Preview placeholder</div>
       </div>
     </a>
